@@ -1,2 +1,7 @@
-# anomaly-detection
-It describes the algorithms of anomaly detection.
+# Anomaly Detection
+
+## Sagemaker의 Built-in Algorithm
+
+### Random Cut Forest
+### IP Insight*s
+
