@@ -14,7 +14,7 @@
 2) A thresholding model for determining if a point should be labeled as anomalous
 
 
-## anomaly grade and a confidence score
+## Anomaly grade and a confidence score
 
 The anomaly grade is a measurement of the severity of an anomaly on a scale from zero to one. A zero anomaly grade indicates that the corresponding data point is normal.
 Any non-zero grade means that the anomaly score output by RCF exceeds the calculated score threshold, and therefore indicates the presence of an anomaly. 
