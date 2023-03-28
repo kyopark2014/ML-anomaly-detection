@@ -34,6 +34,7 @@ Isolation Forest recursively partitions the hyperspace of features to construct 
 
 shingle (조약돌)
 
+[랜덤 포레스트 (Random Forest)](https://github.com/kyopark2014/ML-Algorithms/blob/main/decision-tree.md)
 
 - RCF는 제한된 메모리와 컴퓨팅을 가지고 Isolation Forest로 데이터 스트링을 처리합니다. (adapted Isolation Forest to work on data streams with bounded memory and lightweight compute.)
 
