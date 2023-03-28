@@ -70,3 +70,4 @@ Amazon SageMaker의 RCF 알고리즘은 우선 학습 데이터에서 임의로 
 
 [Using Random Cut Forests for real-time anomaly detection in Amazon OpenSearch Service](https://aws.amazon.com/ko/blogs/big-data/using-random-cut-forests-for-real-time-anomaly-detection-in-amazon-opensearch-service/)
 
+[Real Time Anomaly Detection in Open Distro for Elasticsearch](https://opensearch.org/blog/real-time-anomaly-detection-in-open-distro-for-elasticsearch/)
