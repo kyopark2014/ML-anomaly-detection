@@ -10,7 +10,7 @@
 
 ## RCF 
 
-![image](https://user-images.githubusercontent.com/52392004/228092706-48d72e27-5db5-4214-9a70-6fcf68f1865e.png)
+
 
 lightweight density estimation에 해당합니다. 
 
@@ -22,7 +22,12 @@ The [Isolation Forest (2008)](https://dl.acm.org/doi/10.1109/ICDM.2008.17) metho
 
 Isolation Forest recursively partitions the hyperspace of features to construct trees (the leaf nodes are feature samples), and assigns an anomaly score to each data point based on the sample tree heights. It is a batch processing method.
   
+![image](https://user-images.githubusercontent.com/52392004/228095136-e95a1976-b4f7-4552-affa-83723dc2b40e.png)
+
+  
 #### Random Cut Forest
+
+![image](https://user-images.githubusercontent.com/52392004/228092706-48d72e27-5db5-4214-9a70-6fcf68f1865e.png)
 
 [Robust random cut forest based anomaly detection on streams](https://dl.acm.org/doi/10.5555/3045390.3045676)
 
