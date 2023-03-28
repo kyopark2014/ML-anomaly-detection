@@ -8,22 +8,28 @@
 
 ![image](https://user-images.githubusercontent.com/52392004/228092087-fe43cfa8-d6b6-4f46-bb1c-a52bf587dcec.png)
 
-## RCF
+## RCF 
 
 ![image](https://user-images.githubusercontent.com/52392004/228092706-48d72e27-5db5-4214-9a70-6fcf68f1865e.png)
 
-lightweight density estimation
+lightweight density estimation에 해당합니다. 
   
-  -Isolation Forest 
-  The [Isolation Forest (2008)](https://dl.acm.org/doi/10.1109/ICDM.2008.17) method [1] uses random forests to isolate anomalous data.
-  Isolation Forest recursively partitions the hyperspace of features to construct trees (the leaf nodes are feature samples), and assigns an anomaly score to each data point based on the sample tree heights. It is a batch processing method.
+#### Isolation Forest 
+
+The [Isolation Forest (2008)](https://dl.acm.org/doi/10.1109/ICDM.2008.17) method [1] uses random forests to isolate anomalous data.
+
+Isolation Forest recursively partitions the hyperspace of features to construct trees (the leaf nodes are feature samples), and assigns an anomaly score to each data point based on the sample tree heights. It is a batch processing method.
   
-Random Cut Forest
+#### Random Cut Forest
+
 [Robust random cut forest based anomaly detection on streams](https://dl.acm.org/doi/10.5555/3045390.3045676)
-adapted Isolation Forest to work on data streams with bounded memory and lightweight compute. RCF incrementally updates the forest on each feature sample and interleaves training and inference. RCF also emits an anomaly score for each feature sample. The RCF estimator has been proven as it have been used in production settings
+
+- RCF는 제한된 메모리와 컴퓨팅을 가지고 Isolation Forest로 데이터 스트링을 처리합니다. (adapted Isolation Forest to work on data streams with bounded memory and lightweight compute.)
+
+- RCF incrementally updates the forest on each feature sample and interleaves training and inference. RCF also emits an anomaly score for each feature sample. The RCF estimator has been proven as it have been used in production settings
 
 
-Putting RCFs to practice for real time anomaly detection in a “set it and forget it” environment requires additional work; we list them down here. First, RCFs emit an anomaly score that is hard to reason about for the user, its magnitude is a function of the data timeseries on which the RCF is trained. We need an additional learning primitive that continuously learns the baseline anomaly score distribution to detect large score values it is a classifier function that maps the anomaly score to a boolean outcome (anomaly or not). Note that this classifier is different from RCF itself. RCF isolates anomalies (i.e., not the baseline) and gives a score timeseries that captures and quantifies anomalous events; the classifier can also be simple, since it operates on one-dimensional positive data. The classifier needs to work with small amounts of data, so it does not block anomaly detection. The classifier emits two values to aid the user: (1) anomaly grade, quantifying severity of the anomaly, and (2) confidence, quantifying the amount of data seen and RCF size.
+- Putting RCFs to practice for real time anomaly detection in a “set it and forget it” environment requires additional work; we list them down here. First, RCFs emit an anomaly score that is hard to reason about for the user, its magnitude is a function of the data timeseries on which the RCF is trained. We need an additional learning primitive that continuously learns the baseline anomaly score distribution to detect large score values it is a classifier function that maps the anomaly score to a boolean outcome (anomaly or not). Note that this classifier is different from RCF itself. RCF isolates anomalies (i.e., not the baseline) and gives a score timeseries that captures and quantifies anomalous events; the classifier can also be simple, since it operates on one-dimensional positive data. The classifier needs to work with small amounts of data, so it does not block anomaly detection. The classifier emits two values to aid the user: (1) anomaly grade, quantifying severity of the anomaly, and (2) confidence, quantifying the amount of data seen and RCF size.
 
 Second, RCFs require training time to learn the initial distribution (i.e., the forest). An RCF requires hundreds of samples, which takes time to arrive at the Elasticsearch cluster. This prevents both interactive exploration of anomalies on current and past data (e.g., using queries), and delays the time-to-detection. In practice, users would define and turn on a detector after ingesting some data - we can leverage this to train an initial model. Further, to support interactive ad-hoc exploration, we need to a fast RCF construction primitive on data at rest.  
 
