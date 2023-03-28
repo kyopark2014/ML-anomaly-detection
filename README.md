@@ -13,6 +13,8 @@
 ![image](https://user-images.githubusercontent.com/52392004/228092706-48d72e27-5db5-4214-9a70-6fcf68f1865e.png)
 
 lightweight density estimation에 해당합니다. 
+
+여기서, Reservoir Sampling은 순차적으로 한 번에 하나의 샘플만 볼 수 있고 전체 샘플 개수를 모르는 상황에서 무작위 추출을 하는 방법입니다. 
   
 #### Isolation Forest 
 
