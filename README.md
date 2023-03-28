@@ -14,8 +14,7 @@
 
 lightweight density estimation에 해당합니다. 
 
-여기서, Reservoir Sampling은 순차적으로 한 번에 하나의 샘플만 볼 수 있고 전체 샘플 개수를 모르는 상황에서 무작위 추출을 하는 방법입니다. 
-  
+
 #### Isolation Forest 
 
 The [Isolation Forest (2008)](https://dl.acm.org/doi/10.1109/ICDM.2008.17) method [1] uses random forests to isolate anomalous data.
@@ -27,9 +26,13 @@ Isolation Forest recursively partitions the hyperspace of features to construct 
   
 #### Random Cut Forest
 
+[Robust random cut forest based anomaly detection on streams](https://dl.acm.org/doi/10.5555/3045390.3045676)
+
 ![image](https://user-images.githubusercontent.com/52392004/228092706-48d72e27-5db5-4214-9a70-6fcf68f1865e.png)
 
-[Robust random cut forest based anomaly detection on streams](https://dl.acm.org/doi/10.5555/3045390.3045676)
+여기서, Reservoir Sampling은 순차적으로 한 번에 하나의 샘플만 볼 수 있고 전체 샘플 개수를 모르는 상황에서 무작위 추출을 하는 방법입니다. 
+  
+
 
 - RCF는 제한된 메모리와 컴퓨팅을 가지고 Isolation Forest로 데이터 스트링을 처리합니다. (adapted Isolation Forest to work on data streams with bounded memory and lightweight compute.)
 
