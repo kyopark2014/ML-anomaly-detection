@@ -26,7 +26,9 @@ Isolation Forest recursively partitions the hyperspace of features to construct 
   
 #### Random Cut Forest
 
-[Robust random cut forest based anomaly detection on streams](https://dl.acm.org/doi/10.5555/3045390.3045676)
+[Robust random cut forest based anomaly detection on streams - 2016](https://dl.acm.org/doi/10.5555/3045390.3045676)
+
+[Robust Random Cut Forest Based Anomaly Detection on Streams](https://www.semanticscholar.org/paper/Robust-Random-Cut-Forest-Based-Anomaly-Detection-on-Guha-Mishra/ecb365ef9b67cd5540cc4c53035a6a7bd88678f9?p2df)
 
 ![image](https://user-images.githubusercontent.com/52392004/228092706-48d72e27-5db5-4214-9a70-6fcf68f1865e.png)
 
@@ -35,6 +37,8 @@ Isolation Forest recursively partitions the hyperspace of features to construct 
 shingle (조약돌)
 
 [랜덤 포레스트 (Random Forest)](https://github.com/kyopark2014/ML-Algorithms/blob/main/decision-tree.md)
+
+
 
 - RCF는 제한된 메모리와 컴퓨팅을 가지고 Isolation Forest로 데이터 스트링을 처리합니다. (adapted Isolation Forest to work on data streams with bounded memory and lightweight compute.)
 
