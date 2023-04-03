@@ -2,7 +2,7 @@
 
 ## Anomaly 란?
 
-[Anomaly Detection]에서는 Anomaly의 정의에 대해 설명합니다.
+[Anomaly](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/anomaly.md)에서는 Anomaly의 정의에 대해 설명합니다.
 
 ## RCF 
 
