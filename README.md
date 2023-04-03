@@ -12,7 +12,9 @@
 
 [SageMaker의 RCF](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/SageMaker/README.md)에서는 SageMaker의 Built-in Algorithm을 이용한 RCF 구현 방법에 대해 설명합니다.
 
+## 뉴욕 택시 정보
 
+[nyc_taxi.csv](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/ny-taxi/nyc_taxi.csv)에서는 뉴욕 택시의 호출 정보를 표시하고 있습니다.
 
 ## Reference 
 
