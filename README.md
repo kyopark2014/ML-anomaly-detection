@@ -1,14 +1,12 @@
 # Anomaly Detection
 
-이상(Anomaly)라는 것은 정형화된 데이터 또는 특정 패턴을 보이는 데이터와 다른 형태로 나타나는 데이터를 말합니다. 예를 들면, 시계열 데이터에서 예측 불가한 순간 급변 형태의 값을 보이는 것을 생각해볼 수 있습니다. 또 예측치와 맞지 않는 결과, 분류가 안되는 데이터 등도 ‘이상’의 예에 해당됩니다. 데이터넷에 이러한 이상치들이 포함되어 있을 경우 머신 러닝 작업의 복잡도가 높아집니다. 왜냐하면 “정상적인 (regular)” 데이터의 경우 단순한 모델로 표현될 수 있기 때문입니다.
+## Anomaly 란?
 
-
-- 사람은 어떤것들의 순서가 바뀐다거나 하는것에 놀라운 직관을 가지고 있습니다. 
-- anomaly 정의는 “a data point lying in a low-density region" 입니다. 오른쪽 끝의 점과 같이 낮은 밀도로 발생하는곳을 anomaly로 얘기할 수 있습니다. anomaly 자체가 나쁘것이 아니라, 낮은 빈도로 발생하거나 정상 범위를 벗어난것 정도로 생각해야 합니다.
-
-![image](https://user-images.githubusercontent.com/52392004/228092087-fe43cfa8-d6b6-4f46-bb1c-a52bf587dcec.png)
+[Anomaly Detection]에서는 Anomaly의 정의에 대해 설명합니다.
 
 ## RCF 
+
+
 
 
 
