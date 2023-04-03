@@ -14,6 +14,56 @@ Amazon SageMaker의 RCF 알고리즘은 우선 학습 데이터에서 임의로 
 
 ## 구현 방법
 
+[SageMaker-RCF.ipynb](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/SageMaker/SageMaker-RCF.ipynb)는 SageMaker의 RCF 라이브러리를 이용하여 Anomaly Detection을 수행합니다. 
+
+
+### 모델 학습
+
+아래와 같이 RandomCutForest를 선언하고 모델을 학습합니다.
+
+```java
+from sagemaker import RandomCutForest
+
+session = sagemaker.Session()
+
+rcf = RandomCutForest(
+    role=execution_role,
+    instance_count=1,
+    instance_type="ml.m4.xlarge",
+    data_location=f"s3://{bucket}/{prefix}/",
+    output_path=f"s3://{bucket}/{prefix}/output",
+    num_samples_per_tree=512,
+    num_trees=50,
+)
+
+rcf.fit(rcf.record_set(taxi_data.value.to_numpy().reshape(-1, 1)))
+```
+
+### 추론 (Inference)
+
+아래와 같이 추론을 수행합니다. 
+
+```java
+rcf_inference = rcf.deploy(initial_instance_count=1, instance_type="ml.m4.xlarge")
+
+results = rcf_inference.predict(taxi_data_numpy)
+scores = [datum["score"] for datum in results["scores"]]
+
+# add scores to taxi data frame and print first few values
+taxi_data["score"] = pd.Series(scores, index=taxi_data.index)
+taxi_data.head()
+```
+
+이때의 결과는 아래와 같습니다.
+
+![image](https://user-images.githubusercontent.com/52392004/229640338-795fc0a4-1a9f-4b8c-b6c3-b53e6cac72a9.png)
+
+
+
 
 
 ## Reference
+
+[An Introduction to SageMaker Random Cut Forests](https://sagemaker-examples.readthedocs.io/en/latest/introduction_to_amazon_algorithms/random_cut_forest/random_cut_forest.html#An-Introduction-to-SageMaker-Random-Cut-Forests)
+
+[An Introduction to SageMaker Random Cut Forests - Notebook](https://github.com/aws/amazon-sagemaker-examples/blob/main/introduction_to_amazon_algorithms/random_cut_forest/random_cut_forest.ipynb)
