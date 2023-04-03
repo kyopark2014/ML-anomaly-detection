@@ -82,7 +82,7 @@ rcf_inference2 = rcf.deploy(initial_instance_count=1, instance_type="local")
 ClientError: An error occurred (ValidationException) when calling the CreateEndpointConfig operation: 1 validation error detected: Value 'local' at 'productionVariants.1.member.instanceType' failed to satisfy constraint
 ```
 
-따라서, SageMaker의 RandomCutForest는 오로지 SageMaker를 통해서만 제공 가능합니다. [Use the built-in Amazon SageMaker Random Cut Forest algorithm for anomaly detection](https://aws.amazon.com/ko/blogs/machine-learning/use-the-built-in-amazon-sagemaker-random-cut-forest-algorithm-for-anomaly-detection/)를 보면 2018년에는 ECR을 이용해 배포가 가능하였던것으로 보여지나, 현재는 ECR이나 Lambda의 내용을 확인할 수 없으므로 IoT등으로 확대는 불가합니다. 
+따라서, SageMaker의 RandomCutForest는 오로지 SageMaker를 통해서만 제공 가능합니다. [Use the built-in Amazon SageMaker Random Cut Forest algorithm for anomaly detection](https://aws.amazon.com/ko/blogs/machine-learning/use-the-built-in-amazon-sagemaker-random-cut-forest-algorithm-for-anomaly-detection/)를 보면 2018년에는 ECR을 이용해 배포가 가능하였던것으로 보여지나, 현재는 ECR이나 Lambda의 내용을 확인할 수 없으므로 IoT등으로 확대는 어려운것으로 보여집니다.
 
 
 ### Serverless 구현
