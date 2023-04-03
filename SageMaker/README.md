@@ -61,6 +61,8 @@ taxi_data.head()
 
 ## SageMaker RCF의 제한 및 조금 다른 구현
 
+[rcf-serverless.ipynb](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/SageMaker/rcf-serverless.ipynb)는 AWS Sample을 조금 수정해서 테스트를 한 노트북입니다.
+
 
 
 
