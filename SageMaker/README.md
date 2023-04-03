@@ -12,7 +12,7 @@ Amazon SageMaker의 RCF 알고리즘은 우선 학습 데이터에서 임의로 
 . 서브 셈플 데이터들을 Random Cut Forest를 구성하는 이진트리 구성하고 이때 모든 leaf가 데이터를 하나만 담고 있는 바운딩 박스로 만들어질때까지 계속 반복
 . 입력 데이터에 할당된 anomaly score는 forest를 구성하는 tree의 평균 depth와 반비례
 
-## 구현 방법
+## SageMaker Sample을 이용한 구현
 
 [SageMaker-RCF.ipynb](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/SageMaker/SageMaker-RCF.ipynb)는 SageMaker의 RCF 라이브러리를 이용하여 Anomaly Detection을 수행합니다. 
 
@@ -58,6 +58,8 @@ taxi_data.head()
 
 ![image](https://user-images.githubusercontent.com/52392004/229640338-795fc0a4-1a9f-4b8c-b6c3-b53e6cac72a9.png)
 
+
+## SageMaker RCF의 제한 
 
 
 
