@@ -86,7 +86,17 @@ ClientError: An error occurred (ValidationException) when calling the CreateEndp
 
 ### Serverless 구현
 
-[rcf-serverless.ipynb](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/SageMaker/rcf-serverless.ipynb)에서는 [SageMaker Endpoint (Single Model Endpoint)](https://github.com/aws-samples/aws-ai-ml-workshop-kr/blob/master/sagemaker/sm-special-webinar/lab_2_serving/2.1.Deploy.ipynb)를 참조하여 serverless로 설정을 바꿉니다.
+[rcf-serverless.ipynb](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/SageMaker/rcf-serverless.ipynb)에서는 [SageMaker Endpoint (Single Model Endpoint)](https://github.com/aws-samples/aws-ai-ml-workshop-kr/blob/master/sagemaker/sm-special-webinar/lab_2_serving/2.1.Deploy.ipynb)를 참조하여 serverless(Lambda)로 설정을 바꿉니다.
+
+
+모델이름의 확인은 여기서는 
+
+모델이름의 확인은 s
+```java
+endpoint_config_name = rcf_inference.endpoint
+
+model_name = 'randomcutforest-2023-04-03-17-35-44-922'
+
 
 
 ## Reference
