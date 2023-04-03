@@ -87,7 +87,7 @@ ClientError: An error occurred (ValidationException) when calling the CreateEndp
 
 ### Serverless 구현
 
-[rcf-serverless.ipynb](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/SageMaker/rcf-serverless.ipynb)에서는 [SageMaker Endpoint (Single Model Endpoint)](https://github.com/aws-samples/aws-ai-ml-workshop-kr/blob/master/sagemaker/sm-special-webinar/lab_2_serving/2.1.Deploy.ipynb)를 참조하여 serverless(Lambda)로 설정을 바꿉니다.
+[rcf-serverless.ipynb](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/SageMaker/rcf-serverless.ipynb)에서는 [SageMaker Endpoint (Single Model Endpoint)](https://github.com/aws-samples/aws-ai-ml-workshop-kr/blob/master/sagemaker/sm-special-webinar/lab_2_serving/2.1.Deploy.ipynb), [SageMaker Serverless Inference](https://github.com/aws-samples/sm-model-serving-patterns/tree/main/key_features/ptn_4.2_serverless-inference)를 참조하여 serverless(Lambda)로 설정을 바꿉니다.
 
 
 모델이름은 SageMaker에서 확인하였습니다. 만약 코드로 확인하려면 [SageMaker - Random Cut Forest - 상세 라이브러리 설명](https://sagemaker.readthedocs.io/en/v2.20.0/algorithms/randomcutforest.html)을 통해 구현합니다.
@@ -214,3 +214,5 @@ anomalies
 [SageMaker - Random Cut Forest - 상세 라이브러리 설명](https://sagemaker.readthedocs.io/en/v2.20.0/algorithms/randomcutforest.html)
 
 [Use the built-in Amazon SageMaker Random Cut Forest algorithm for anomaly detection](https://aws.amazon.com/ko/blogs/machine-learning/use-the-built-in-amazon-sagemaker-random-cut-forest-algorithm-for-anomaly-detection/)
+
+[SageMaker Serverless Inference](https://github.com/aws-samples/sm-model-serving-patterns/tree/main/key_features/ptn_4.2_serverless-inference)
