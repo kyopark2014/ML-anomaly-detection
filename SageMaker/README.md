@@ -142,9 +142,9 @@ taxi_data.head()
 
 ### SageMaker의 Anomaly Detection 결과 
 
-[nyc_taxi.csv](https://raw.githubusercontent.com/numenta/NAB/master/data/realKnownCause/nyc_taxi.csv)
+[nyc_taxi.csv](https://raw.githubusercontent.com/numenta/NAB/master/data/realKnownCause/nyc_taxi.csv)는 아래와 같습니다.
 
-
+```java
 timestamp,value
 2014-07-01 00:00:00,10844
 2014-07-01 00:30:00,8127
@@ -167,6 +167,10 @@ timestamp,value
 2014-07-01 09:00:00,19539
 2014-07-01 09:30:00,20107
 2014-07-01 10:00:00,18984
+```
+
+이때의 
+
 ![image](https://user-images.githubusercontent.com/52392004/229644978-ed276ca7-e8fb-485e-8af6-3a78667a83cb.png)
 
 
