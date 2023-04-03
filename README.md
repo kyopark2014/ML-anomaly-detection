@@ -4,7 +4,9 @@
 
 [Anomaly](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/anomaly.md)에서는 Anomaly의 정의에 대해 설명합니다.
 
+## RCF 란?
 
+[Random Cut Forest (RCF)](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/rcf.md)에서는 RCF 이론에 대해 설명합니다.
 
 ## Sagemaker의 Built-in Algorithm
 
