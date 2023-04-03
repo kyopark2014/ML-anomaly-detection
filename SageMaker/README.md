@@ -74,6 +74,29 @@ results = rcf.predict(
 AttributeError: 'RandomCutForest' object has no attribute 'predict'
 ```
 
+[SageMaker Endpoint (Single Model Endpoint)](https://github.com/aws-samples/aws-ai-ml-workshop-kr/blob/master/sagemaker/sm-special-webinar/lab_2_serving/2.1.Deploy.ipynb)와 같이 Built-in XGBoost시 사용시 deploy후에 predict합니다. 오픈소스에서는 [XGBoost를 이용한 자동차 보험 사기](https://github.com/kyopark2014/ML-xgboost/tree/main/auto-insurance-claim)와 같이 model.predict()을 사용할 수 있습니다.
+
+```java
+from sagemaker.xgboost.model import XGBoostModel
+from sagemaker.model import Model
+from sagemaker.image_uris import retrieve
+
+xgb_model = XGBoostModel(
+    model_data=s3_path,
+    role=role,
+    entry_point="src/inference.py",
+    framework_version=XGB_FRAMEWORK_VERSION,
+)
+
+xgb_predictor = xgb_model.deploy(
+    initial_instance_count=1,
+    instance_type='local'
+)
+
+outputs = xgb_predictor.predict(test_df.values)
+y_pred = outputs['pred']; y_prob = outputs['prob']
+```
+
 Instacne type을 local로 지정할 수 없습니다. Built-in 알고리즘은 비슷한 정책을 가지고 있으며, XGBoost와 같이 Open 소스인 경우만 제공한다고 합니다.
 
 ```java
