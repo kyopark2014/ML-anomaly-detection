@@ -59,7 +59,9 @@ taxi_data.head()
 ![image](https://user-images.githubusercontent.com/52392004/229640338-795fc0a4-1a9f-4b8c-b6c3-b53e6cac72a9.png)
 
 
-## SageMaker RCF의 제한 
+## SageMaker RCF의 제한 및 조금 다른 구현
+
+
 
 
 
