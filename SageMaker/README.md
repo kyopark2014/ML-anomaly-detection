@@ -61,11 +61,32 @@ taxi_data.head()
 
 ## SageMaker RCF의 제한 및 조금 다른 구현
 
+### Built-in 라이브러리의 배포방법
+
 [rcf-serverless.ipynb](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/SageMaker/rcf-serverless.ipynb)는 AWS Sample을 조금 수정해서 테스트를 한 노트북입니다.
 
+아래와 같이 RandomCutForest는 predict 함수를 제공하지 않습니다. 
 
+```java
+results = rcf.predict(
+    taxi_data_numpy[:6]
+)
+AttributeError: 'RandomCutForest' object has no attribute 'predict'
+```
 
+Instacne type을 local로 지정할 수 없습니다. Built-in 알고리즘은 비슷한 정책을 가지고 있으며, XGBoost와 같이 Open 소스인 경우만 제공한다고 합니다.
 
+```java
+rcf_inference2 = rcf.deploy(initial_instance_count=1, instance_type="local")
+
+ClientError: An error occurred (ValidationException) when calling the CreateEndpointConfig operation: 1 validation error detected: Value 'local' at 'productionVariants.1.member.instanceType' failed to satisfy constraint
+```
+
+따라서, SageMaker의 RandomCutForest는 오로지 SageMaker를 통해서만 제공 가능합니다. 
+
+### Serverless 구현
+
+[rcf-serverless.ipynb](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/SageMaker/rcf-serverless.ipynb)에서는 [SageMaker Endpoint (Single Model Endpoint)](https://github.com/aws-samples/aws-ai-ml-workshop-kr/blob/master/sagemaker/sm-special-webinar/lab_2_serving/2.1.Deploy.ipynb)를 참조하여 serverless로 설정을 바꿉니다.
 
 
 ## Reference
@@ -73,3 +94,5 @@ taxi_data.head()
 [An Introduction to SageMaker Random Cut Forests](https://sagemaker-examples.readthedocs.io/en/latest/introduction_to_amazon_algorithms/random_cut_forest/random_cut_forest.html#An-Introduction-to-SageMaker-Random-Cut-Forests)
 
 [An Introduction to SageMaker Random Cut Forests - Notebook](https://github.com/aws/amazon-sagemaker-examples/blob/main/introduction_to_amazon_algorithms/random_cut_forest/random_cut_forest.ipynb)
+
+[Amazon SageMaker 모델 배포 실습 - 김대근](https://www.youtube.com/watch?v=1rr9GgJelBU&list=PLORxAVAC5fUULZBkbSE--PSY6bywP7gyr&index=6)
