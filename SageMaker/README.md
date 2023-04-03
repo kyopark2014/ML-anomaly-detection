@@ -89,7 +89,7 @@ ClientError: An error occurred (ValidationException) when calling the CreateEndp
 [rcf-serverless.ipynb](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/SageMaker/rcf-serverless.ipynb)에서는 [SageMaker Endpoint (Single Model Endpoint)](https://github.com/aws-samples/aws-ai-ml-workshop-kr/blob/master/sagemaker/sm-special-webinar/lab_2_serving/2.1.Deploy.ipynb)를 참조하여 serverless(Lambda)로 설정을 바꿉니다.
 
 
-모델이름은 SageMaker에서 확인하였습니다. (필요시 방법 찾을것)
+모델이름은 SageMaker에서 확인하였습니다. 만약 코드로 확인하려면 [SageMaker - Random Cut Forest - 상세 라이브러리 설명](https://sagemaker.readthedocs.io/en/v2.20.0/algorithms/randomcutforest.html)을 통해 구현합니다.
 
 아래와 같이 endpoint configureation을 생성합니다.
 
@@ -169,10 +169,33 @@ timestamp,value
 2014-07-01 10:00:00,18984
 ```
 
-이때의 
+이때의 패턴은 아래와 같습니다.
 
 ![image](https://user-images.githubusercontent.com/52392004/229644978-ed276ca7-e8fb-485e-8af6-3a78667a83cb.png)
 
+Anomaly Score를 구하면 아래와 같습니다.
+
+![image](https://user-images.githubusercontent.com/52392004/229645341-c42235d7-ed14-49d3-b642-d3fabc985da2.png)
+
+
+여기서 Anaomaly Score에 대한 cutoff를 정의합니다.
+
+```java
+score_mean = taxi_data["score"].mean()
+score_std = taxi_data["score"].std()
+score_cutoff = score_mean + 3 * score_std
+
+anomalies = taxi_data_subset[taxi_data_subset["score"] > score_cutoff]
+anomalies
+```
+
+이때의 결과는 아래와 같습니다.
+
+![image](https://user-images.githubusercontent.com/52392004/229645476-67636e47-021a-4f00-a640-7ae418371ac2.png)
+
+이것을 plot으로 표시하면 아래와 같이 anomaly를 구분할 수 있습니다.
+
+![image](https://user-images.githubusercontent.com/52392004/229645556-4520e78c-637a-45e7-83b2-b4b4a0ab78e8.png)
 
 
 ## Reference
@@ -182,3 +205,10 @@ timestamp,value
 [An Introduction to SageMaker Random Cut Forests - Notebook](https://github.com/aws/amazon-sagemaker-examples/blob/main/introduction_to_amazon_algorithms/random_cut_forest/random_cut_forest.ipynb)
 
 [Amazon SageMaker 모델 배포 실습 - 김대근](https://www.youtube.com/watch?v=1rr9GgJelBU&list=PLORxAVAC5fUULZBkbSE--PSY6bywP7gyr&index=6)
+
+[SageMaker Endpoint (Single Model Endpoint)](https://github.com/aws-samples/aws-ai-ml-workshop-kr/blob/master/sagemaker/sm-special-webinar/lab_2_serving/2.1.Deploy.ipynb)
+
+[Deploy SageMaker Serverless Endpoint](https://github.com/aws-samples/sm-model-serving-patterns/blob/main/key_features/ptn_4.2_serverless-inference/serverless_endpoint_kornlp_korsts.ipynb)
+
+[SageMaker - Random Cut Forest - 상세 라이브러리 설명](https://sagemaker.readthedocs.io/en/v2.20.0/algorithms/randomcutforest.html)
+
