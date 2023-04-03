@@ -10,8 +10,7 @@
 
 ## SageMaker
 
-[](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/SageMaker/README.md)에서는 SageMaker의 
-Built-in Algorithm을 
+[SageMaker의 RCF](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/SageMaker/README.md)에서는 SageMaker의 Built-in Algorithm을 이용한 RCF 구현 방법에 대해 설명합니다.
 
 
 
