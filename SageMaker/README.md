@@ -91,6 +91,8 @@ ClientError: An error occurred (ValidationException) when calling the CreateEndp
 
 모델이름은 SageMaker에서 확인하였습니다. (필요시 방법 찾을것)
 
+아래와 같이 endpoint configureation을 생성합니다.
+
 ```java
 endpoint_config_name = rcf_inference.endpoint
 
@@ -110,6 +112,62 @@ endpoint_config_response = sm_client.create_endpoint_config(
     ],
 )
 ```
+
+아래의 "sm_client.create_endpoint"로 endpoint 생성이 가능하지만 SageMaker Console에서 직접 생성하였습니다.
+
+```java
+endpoint_name = f"randomcutforest-2023-04-03-17-35-44-922"
+endpoint_response = sm_client.create_endpoint(
+    EndpointName=endpoint_name, 
+    EndpointConfigName=endpoint_config_name
+)
+print(f"Creating Endpoint: {endpoint_response['EndpointArn']}")
+
+```
+
+아래와 같이 inference 결과를 확인합니다. 처음에는 cold start로 느리지만 두번째부터는 빠르게 결과를 리턴합니다.
+
+```java
+results = rcf_inference.predict(taxi_data_numpy)
+scores = [datum["score"] for datum in results["scores"]]
+
+# add scores to taxi data frame and print first few values
+taxi_data["score"] = pd.Series(scores, index=taxi_data.index)
+taxi_data.head()
+```
+
+거의 동일한 패턴의 결과를 얻습니다.
+
+![image](https://user-images.githubusercontent.com/52392004/229644878-be9e6816-b489-4672-b3ac-86c7bb3424fd.png)
+
+### SageMaker의 Anomaly Detection 결과 
+
+[nyc_taxi.csv](https://raw.githubusercontent.com/numenta/NAB/master/data/realKnownCause/nyc_taxi.csv)
+
+
+timestamp,value
+2014-07-01 00:00:00,10844
+2014-07-01 00:30:00,8127
+2014-07-01 01:00:00,6210
+2014-07-01 01:30:00,4656
+2014-07-01 02:00:00,3820
+2014-07-01 02:30:00,2873
+2014-07-01 03:00:00,2369
+2014-07-01 03:30:00,2064
+2014-07-01 04:00:00,2221
+2014-07-01 04:30:00,2158
+2014-07-01 05:00:00,2515
+2014-07-01 05:30:00,4364
+2014-07-01 06:00:00,6526
+2014-07-01 06:30:00,11039
+2014-07-01 07:00:00,13857
+2014-07-01 07:30:00,15865
+2014-07-01 08:00:00,17920
+2014-07-01 08:30:00,20346
+2014-07-01 09:00:00,19539
+2014-07-01 09:30:00,20107
+2014-07-01 10:00:00,18984
+![image](https://user-images.githubusercontent.com/52392004/229644978-ed276ca7-e8fb-485e-8af6-3a78667a83cb.png)
 
 
 
