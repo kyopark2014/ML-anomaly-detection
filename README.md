@@ -13,7 +13,7 @@
 
 ### 뉴욕 택시 정보
 
-[nyc_taxi.csv](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/ny-taxi/nyc_taxi.csv)에서는 뉴욕 택시의 호출 정보를 표시하고 있습니다.
+[nyc_taxi.csv](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/nyc-taxi/nyc_taxi.csv)에서는 뉴욕 택시의 호출 정보를 표시하고 있습니다.
 
 
 
