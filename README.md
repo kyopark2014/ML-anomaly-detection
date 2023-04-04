@@ -22,6 +22,11 @@
 curl https://raw.githubusercontent.com/numenta/NAB/master/data/realKnownCause/nyc_taxi.csv -o nyc_taxi.csv
 ```
 
+## RRCF (Robust Random Cut Forest) Algorithm
+
+[RRCF](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/rrcf/README.md)에서는 RRCF를 이용한 Anomaly Detection에 대해 설명합니다.
+
+
 ## Reference 
 
 [이상 탐지를 위한 Amazon SageMaker 의 Random Cut Forest 빌트인 알고리즘](https://aws.amazon.com/ko/blogs/korea/use-the-built-in-amazon-sagemaker-random-cut-forest-algorithm-for-anomaly-detection/)
