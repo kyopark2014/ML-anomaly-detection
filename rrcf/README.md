@@ -118,3 +118,9 @@ plt.tight_layout()
 이때의 결과는 아래와 같습니다.
 
 ![image](https://user-images.githubusercontent.com/52392004/229655838-8699fe0d-3dc0-4beb-a7f3-cdf400c49946.png)
+
+## Reference
+
+[rrcf](https://klabum.github.io/rrcf/)
+
+[rrcf-github](https://github.com/kLabUM/rrcf)
