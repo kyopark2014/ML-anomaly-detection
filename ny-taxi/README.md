@@ -1,6 +1,17 @@
 # NYC Taxi Data
 
-### Create events
+### 데이터 소스
+
+[nyc_taxi.csv](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/ny-taxi/nyc_taxi.csv)는 아래와 같습니다.
+
+해당 정보는 아래처럼 다운로드 가능합니다.
+
+```java
+curl https://raw.githubusercontent.com/numenta/NAB/master/data/realKnownCause/nyc_taxi.csv -o nyc_taxi.csv
+```
+
+
+### 주요 이벤트
 
 ```java
 events = {
@@ -23,7 +34,7 @@ events = {
 }
 ```
 
-[nyc_taxi.csv](https://raw.githubusercontent.com/numenta/NAB/master/data/realKnownCause/nyc_taxi.csv)는 아래와 같습니다.
+
 
 ```java
 timestamp,value
