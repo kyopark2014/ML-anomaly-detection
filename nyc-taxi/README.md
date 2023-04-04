@@ -2,7 +2,7 @@
 
 ### 데이터 소스
 
-[nyc_taxi.csv](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/ny-taxi/nyc_taxi.csv)는 아래와 같습니다.
+[nyc_taxi.csv](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/nyc-taxi/nyc_taxi.csv)는 아래와 같습니다.
 
 해당 정보는 아래처럼 다운로드 가능합니다.
 
@@ -62,6 +62,6 @@ timestamp,value
 ```
 
 
-[NYC_Taxi_Traffic_Analysis.ipynb](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/ny-taxi/NYC_Taxi_Traffic_Analysis.ipynb)에서 NYC Taxi Traffic에 대한 분석을 노트북으로 수행합니다.
+[NYC_Taxi_Traffic_Analysis.ipynb](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/nyc-taxi/NYC_Taxi_Traffic_Analysis.ipynb)에서 NYC Taxi Traffic에 대한 분석을 노트북으로 수행합니다.
 
 
