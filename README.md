@@ -15,11 +15,7 @@
 
 [nyc_taxi.csv](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/ny-taxi/nyc_taxi.csv)에서는 뉴욕 택시의 호출 정보를 표시하고 있습니다.
 
-해당 정보는 아래처럼 다운로드 가능합니다.
 
-```java
-curl https://raw.githubusercontent.com/numenta/NAB/master/data/realKnownCause/nyc_taxi.csv -o nyc_taxi.csv
-```
 
 ## RCF 란?
 
