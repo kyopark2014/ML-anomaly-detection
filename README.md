@@ -24,7 +24,7 @@ curl https://raw.githubusercontent.com/numenta/NAB/master/data/realKnownCause/ny
 
 
 
-## RRCF (Robust Random Cut Forest) Algorithm
+## RRCF (Robust Random Cut Forest)를 이용한 Anomaly Detection
 
 [RRCF](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/rrcf/README.md)에서는 RRCF를 이용한 Anomaly Detection에 대해 설명합니다.
 
