@@ -1,6 +1,6 @@
 # Robust Random Cut Forest Algorithm
 
-[rrcf](https://klabum.github.io/rrcf/)는 Guha et al(2016)의 Robust Random Cut Forest Algorithm를 구현합니다.
+[rrcf](https://klabum.github.io/rrcf/)는 Guha et al(2016)의 Robust Random Cut Forest Algorithm를 구현합니다. 관련된 코드는 [rrcf-basic.ipynb](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/rrcf/rrcf-basic.ipynb)을 참조합니다.
 
 라이브러리를 설치합니다.
 
