@@ -2,9 +2,16 @@
 
 ## Anomaly 란?
 
-[Anomaly](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/anomaly.md)에서는 Anomaly의 정의에 대해 설명합니다.
+[Anomaly](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/anomaly.md)에서는 Anomaly의 정의에 대해 설명합니다. 
 
-#### 뉴욕 택시 정보
+### Anomaly Detection 용도
+
+- 유지보수를 예측: default/defect 예측
+- 네트워크 보안
+- Health Care
+- financial fraud 검출 
+
+### 뉴욕 택시 정보
 
 [nyc_taxi.csv](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/ny-taxi/nyc_taxi.csv)에서는 뉴욕 택시의 호출 정보를 표시하고 있습니다.
 
