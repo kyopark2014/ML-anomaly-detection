@@ -1,4 +1,4 @@
-# NYC Taci Data
+# NYC Taxi Data
 
 ### Create events
 
@@ -49,4 +49,8 @@ timestamp,value
 2014-07-01 09:30:00,20107
 2014-07-01 10:00:00,18984
 ```
+
+
+[NYC_Taxi_Traffic_Analysis.ipynb](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/ny-taxi/NYC_Taxi_Traffic_Analysis.ipynb)에서 NYC Taxi Traffic에 대한 분석을 노트북으로 수행합니다.
+
 
