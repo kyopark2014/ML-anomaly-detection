@@ -42,4 +42,11 @@
 
 [Real Time Anomaly Detection in Open Distro for Elasticsearch](https://opensearch.org/blog/real-time-anomaly-detection-in-open-distro-for-elasticsearch/)
 
+[Unsupervised Anomaly Detection with Isolation Forest - Elena Sharova](https://www.youtube.com/watch?v=5p8B2Ikcw-k)
+
+[Robust Anomaly Detection + Seasonal-Trend Decomposition : Time Series Talk](https://www.youtube.com/watch?v=1NXryMoU7Ho)
+
+[STL Decomposition.ipynb - Time-Series-Analysis](https://github.com/ritvikmath/Time-Series-Analysis/blob/master/STL%20Decomposition.ipynb)
+
+[Anomaly Detection using Isolation Forest - Time Series](https://www.youtube.com/watch?v=hkXPdkPfgoo)
 
