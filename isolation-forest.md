@@ -59,3 +59,5 @@ Random partitioning produces noticeably shorter paths for anomalies. Hence, when
 [Outlier Detection Algorithm: Isolation Forest](https://datanetworkanalysis.github.io/2020/04/01/isolation_forest)
 
 [Isolation Forest - 2008](https://dl.acm.org/doi/10.1109/ICDM.2008.17)
+
+[sklearn.ensemble.IsolationForest](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html)
