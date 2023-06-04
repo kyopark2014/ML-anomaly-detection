@@ -8,6 +8,12 @@ Isolation Forest recursively partitions the hyperspace of features to construct 
   
 ![image](https://user-images.githubusercontent.com/52392004/228095136-e95a1976-b4f7-4552-affa-83723dc2b40e.png)
 
+아래와 같이 정상적인 값(x_i)과 이상(x_0)을 분리하기 위하여 트리 모델을 기반으로 분할하면, 이상은 정상보다 분할될때까지 필요한 트리의 숫자가 평균 5회 이내임을 알 수 있습니다. 
+
+
+![image](https://github.com/kyopark2014/ML-anomaly-detection/assets/52392004/f7815600-60cd-4b77-b5dc-b3373a17b76c)
+
+
 #### 특징 
 
 - 이상 징후를 감지하기 위해 거리 또는 밀도 측정을 사용하지 않는다. 따라서 거리 및 밀도 측정 사용법보다 연산량이 적어 비교적 빠르다.
