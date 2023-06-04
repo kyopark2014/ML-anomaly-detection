@@ -1,6 +1,10 @@
 # Random Cut Forest (RCF) 란? 
 
-RCF는 lightweight density estimation에 해당합니다. 
+- RCF(Random Cut Forest)은 데이터셋에서 이상치(outlier)를 탐지하는 비지도 학습 알고리즘입니다.
+
+- RCF는 lightweight density estimation에 해당합니다. 
+
+## Isolation Forest
 
 [Isolation Forest](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/isolation-forest.md)에 대해 설명합니다.
   
