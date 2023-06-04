@@ -25,7 +25,7 @@
 
 ## RCF 란?
 
-[Random Cut Forest (RCF)](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/rcf.md)에서는 RCF 이론에 대해 설명합니다.
+[Random Cut Forest (RCF)](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/rcf.md)에서는 RCF 이론에 대해 설명합니다. RCF 알고리즘은 각 데이터에 대해 이상치 스코어(anomaly score)를 부여할 수 있습니다.
 
 ## SageMaker를 이용한 Anomaly Detection
 
