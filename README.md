@@ -17,7 +17,7 @@
 
 ### Cloud Logs
 
-[realAWSCloudwatch](https://github.com/numenta/NAB/tree/master/data/realAWSCloudwatch)
+[cloudwatchlogs.ipynb](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/cloudwatchlogs/cloudwatchlogs.ipynb)에서는 [realAWSCloudwatch](https://github.com/numenta/NAB/tree/master/data/realAWSCloudwatch)를 이용하여 실제 CloudWatch로 수집된 데이터에서 Anomaly를 아래와 같이 확인할 수 있습니다.
 
 ![image](https://github.com/kyopark2014/ML-anomaly-detection/assets/52392004/3324aa46-838d-4d22-86b7-5bc73698772c)
 
