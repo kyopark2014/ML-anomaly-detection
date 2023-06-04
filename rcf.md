@@ -63,5 +63,4 @@ The confidence score is a measurement of the probability that the anomaly detect
 
 ## Reference
 
-[sklearn.ensemble.IsolationForest](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html)
 
