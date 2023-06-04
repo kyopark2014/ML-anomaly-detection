@@ -1,6 +1,8 @@
 # Isolation Forest
 
-[Isolation Forest (2008)](https://dl.acm.org/doi/10.1109/ICDM.2008.17)는 비정상 데이터를 분류하기 위하여 [Random Forest](https://github.com/kyopark2014/ML-Algorithms/blob/main/random-forest.md)를 이용합니다.
+Isolation Forest는 [Random Forest](https://github.com/kyopark2014/ML-Algorithms/blob/main/random-forest.md)처럼 Tree 구조에 기반한 비정상 검출 알고리즘(Anomaly detection algorithm)으로 비정상 적인 데이터를 검출하기 위하여 비지도학습(unsupervised learning)을 이용합니다. 
+
+[Isolation Forest (2008)](https://dl.acm.org/doi/10.1109/ICDM.2008.17)는 비정상 데이터를 분류하기 위하여 를 이용합니다.
 
 Isolation Forest recursively partitions the hyperspace of features to construct trees (the leaf nodes are feature samples), and assigns an anomaly score to each data point based on the sample tree heights. It is a batch processing method.
   
