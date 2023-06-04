@@ -16,9 +16,22 @@
 
 ![image](https://user-images.githubusercontent.com/52392004/228092706-48d72e27-5db5-4214-9a70-6fcf68f1865e.png)
 
-여기서, Reservoir Sampling은 순차적으로 한 번에 하나의 샘플만 볼 수 있고 전체 샘플 개수를 모르는 상황에서 무작위 추출을 하는 방법입니다. 
 
-shingle (조약돌)
+### Reservoir Sampling
+
+Reservoir Sampling은 순차적으로 한 번에 하나의 샘플만 볼 수 있고 전체 샘플 개수를 모르는 상황에서 무작위 추출을 하는 방법입니다. 
+
+
+### Shingling
+
+Shingling을 이용하여 전처리를 함으로써 정확도를 향상시킵니다.
+
+이상 탐지 알고리즘에서 shingling은 연속성을 지닌 데이터에서 s길이 만큼의 시퀀스를 s차원의 백터로 변환함으로써 1차원 데이터를 s차원 데이터로 바꾸는 기술입니다. 이렇게 하면 정기적으로 나타나는 변화를 탐지하기 좋고, 이상치 스코어의 원래 값에서 작은 규모의 노이즈를 필터링할 수 있습니다. shingling 사이즈가 너무 작을 경우에 Random Cut Forest 알고리즘이 데이터의 작은 변화에도 심하게 영향을 받을 수 있고, 너무 크면 이상치를 탐지하지 못할 수 있습니다
+
+
+
+
+
 
 [랜덤 포레스트 (Random Forest)](https://github.com/kyopark2014/ML-Algorithms/blob/main/decision-tree.md)
 
