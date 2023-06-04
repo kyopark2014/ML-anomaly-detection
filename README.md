@@ -19,6 +19,8 @@
 
 [realAWSCloudwatch](https://github.com/numenta/NAB/tree/master/data/realAWSCloudwatch)
 
+![image](https://github.com/kyopark2014/ML-anomaly-detection/assets/52392004/3324aa46-838d-4d22-86b7-5bc73698772c)
+
 
 ## RCF 란?
 
