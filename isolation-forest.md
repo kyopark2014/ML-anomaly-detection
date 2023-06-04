@@ -12,8 +12,6 @@ Isolation Forest recursively partitions the hyperspace of features to construct 
 
 Isolation Forest는 하나의 feature를 랜덤하게 선택함으로써 observation들을 isolate 합니다. 이후 선택된 feature들의 최대, 최소값 사이에서 랜덤하게 split value를 선택합니다. 
 
-The IsolationForest ‘isolates’ observations by randomly selecting a feature and then randomly selecting a split value between the maximum and minimum values of the selected feature.
-
 recursive한 partitioning은 트리구조로 표현될수 있기 때문에, 하나의 나누어진 수는 루트 노드부터 terminating 노드의 path 길이랑 같다. 
 
 Since recursive partitioning can be represented by a tree structure, the number of splittings required to isolate a sample is equivalent to the path length from the root node to the terminating node.
