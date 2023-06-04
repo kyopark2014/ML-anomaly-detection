@@ -45,6 +45,10 @@ Random partitioning produces noticeably shorter paths for anomalies. Hence, when
 
 - Sub-Sampling Size: 서브 샘플링 크기
 
+[Isolation Forest Parameter tuning with gridSearchCV](https://stackoverflow.com/questions/56078831/isolation-forest-parameter-tuning-with-gridsearchcv)
+
+[How to use the Isolation Forest model for outlier detection](https://practicaldatascience.co.uk/machine-learning/how-to-use-the-isolation-forest-model-for-outlier-detection)
+
 
 
 
