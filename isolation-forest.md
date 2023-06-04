@@ -1,5 +1,6 @@
 # Isolation Forest
-The [Isolation Forest (2008)](https://dl.acm.org/doi/10.1109/ICDM.2008.17) method [1] uses random forests to isolate anomalous data.
+
+[Isolation Forest (2008)](https://dl.acm.org/doi/10.1109/ICDM.2008.17)는 비정상 데이터를 분류하기 위하여 [Random Forest](https://github.com/kyopark2014/ML-Algorithms/blob/main/random-forest.md)를 이용합니다.
 
 Isolation Forest recursively partitions the hyperspace of features to construct trees (the leaf nodes are feature samples), and assigns an anomaly score to each data point based on the sample tree heights. It is a batch processing method.
   
