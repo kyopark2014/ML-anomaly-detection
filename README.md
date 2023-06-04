@@ -2,7 +2,8 @@
 
 ## Anomaly 란?
 
-[Anomaly](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/anomaly.md)에서는 Anomaly의 정의에 대해 설명합니다. 
+[이상 (Anomaly)](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/anomaly.md)에서는 Anomaly의 정의에 대해 설명합니다. 이상은 시계열 데이터의 갑작스러운 급변과 같이 정형화된 데이터 또는 특정 패턴을 보이는 데이터와 다른 형태로 나타나는 데이터를 말합니다. 
+
 
 ### Anomaly Detection 용도
 
