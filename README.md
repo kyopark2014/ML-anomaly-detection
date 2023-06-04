@@ -36,6 +36,11 @@
 
 [RRCF](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/rrcf/README.md)에서는 RRCF를 이용한 Anomaly Detection에 대해 설명합니다.
 
+## Case Stuides
+
+### Network Anomaly Detection
+
+[case-study-network-anomaly](https://github.com/kyopark2014/ML-anomaly-detection/blob/main/case-study-network-anomaly.md)에서는 네트워크에서 발생하는 비정상 트래픽의 검출에 대해 분석합니다.
 
 ## Reference 
 
