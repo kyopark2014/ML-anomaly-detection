@@ -8,6 +8,15 @@ Isolation Forest recursively partitions the hyperspace of features to construct 
   
 ![image](https://user-images.githubusercontent.com/52392004/228095136-e95a1976-b4f7-4552-affa-83723dc2b40e.png)
 
+#### 특징 
+
+- 이상 징후를 감지하기 위해 거리 또는 밀도 측정을 사용하지 않는다. 따라서 거리 및 밀도 측정 사용법보다 연산량이 적어 비교적 빠르다.
+- 트리 모델 기반이기 때문에 데이터의 크기가 크거나 고차원 데이터에서도 효율적이다.
+- 앙상블 기법을 이용합니다.
+- 이상(Anomalies)은 트리의 루트에 더 가까운곳에 있습니다.
+
+![image](https://github.com/kyopark2014/ML-anomaly-detection/assets/52392004/a39a93bc-d6be-428f-9da9-8e30d35d8092)
+
 
 ### [sklearn.ensemble.IsolationForest](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html)
 
@@ -24,6 +33,19 @@ This path length, averaged over a forest of such random trees, is a measure of n
 
 Random partitioning produces noticeably shorter paths for anomalies. Hence, when a forest of random trees collectively produce shorter path lengths for particular samples, they are highly likely to be anomalies.
 
+## Hyperparamter
+
+- Number of Trees: 앙상블 기법을 적용할 iTree의 수
+
+- Sub-Sampling Size: 서브 샘플링 크기
+
+
+
+
 ## Reference 
 
 [How to use the Isolation Forest model for outlier detection](https://practicaldatascience.co.uk/machine-learning/how-to-use-the-isolation-forest-model-for-outlier-detection)
+
+[Outlier Detection Algorithm: Isolation Forest](https://datanetworkanalysis.github.io/2020/04/01/isolation_forest)
+
+[Isolation Forest - 2008](https://dl.acm.org/doi/10.1109/ICDM.2008.17)
