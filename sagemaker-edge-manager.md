@@ -1,6 +1,6 @@
 # SageMaker Edge manager
 
-[SageMaker Edge Manager end of life](https://docs.aws.amazon.com/sagemaker/latest/dg/edge-eol.html)에 따르면 April 26, 2024이후로 SageMaker Edge Manger를 사용할 수 없습니다.
+[SageMaker Edge Manager end of life](https://docs.aws.amazon.com/sagemaker/latest/dg/edge-eol.html)에 따르면 April 26, 2024이후로 SageMaker Edge Manger를 사용할 수 없습니다. 향후에는 Open Neural Network Exchange(ONNX)를 이용하여 SageMaker와 Edge device를 연결할 수 있습니다.
 
 ### Q: How can I continue deploying models on the edge?
 A: We suggest you try one the following machine learning tools. For a cross-platform edge runtime, use ONNX. ONNX is a popular, well-maintained open-source solution that translates your models into instructions that many types of hardware can run, and is compatible with the latest ML frameworks. ONNX can be integrated into your SageMaker workflows as an automated step for your edge deployments.
