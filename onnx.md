@@ -2,7 +2,9 @@
 
 ## Exporting to ONNX
 
-[Exporting to ONNX](https://sagemaker-examples.readthedocs.io/en/latest/sagemaker-python-sdk/mxnet_onnx_export/mxnet_onnx_export.html)의 샘플은 아래와 같습니다.
+### Exporting ONNX Models with MXNet
+
+[Exporting ONNX Models with MXNet](https://sagemaker-examples.readthedocs.io/en/latest/sagemaker-python-sdk/mxnet_onnx_export/mxnet_onnx_export.html)의 샘플은 아래와 같습니다.
 
 ```python
 import os
@@ -23,7 +25,9 @@ def save(model_dir, model):
     onnx_mxnet.export_model(symbol_file, params_file, data_shapes, np.float32, output_path)
 ```    
 
-### build_deployment_package.py
+### aws-samples/ml-edge-getting-started
+
+#### build_deployment_package.py
 
 [build_deployment_package.py](https://github.com/aws-samples/ml-edge-getting-started/blob/main/samples/onnx_accelerator_sample1/onnxacceleratorsampleone/with_ggv2/build_deployment_package.py)
 
@@ -66,7 +70,7 @@ torch.onnx.export(pytorch_model,
                  )
 ```                 
 
-## edge_application.py
+#### edge_application.py
 
 [edge_application.py](https://github.com/aws-samples/ml-edge-getting-started/blob/main/samples/onnx_accelerator_sample1/onnxacceleratorsampleone/with_ggv2/components/aws.samples.windturbine.detector/edge_application.py)
 
