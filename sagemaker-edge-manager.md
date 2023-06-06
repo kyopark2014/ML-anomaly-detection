@@ -7,4 +7,4 @@ A: We suggest you try one the following machine learning tools. For a cross-plat
 
 For edge deployments and monitoring use AWS IoT Greengrass V2. AWS IoT Greengrass V2 has an extensible packaging and deployment mechanism that can fit models and applications at the edge. You can use the built-in MQTT channels to send model telemetry back for Amazon SageMaker Model Monitor or use the built-in permissions system to send data captured from the model back to Amazon Simple Storage Service (Amazon S3). If you don't or can't use AWS IoT Greengrass V2, we suggest using MQTT and IoT Jobs (C/C++ library) to create a lightweight OTA mechanism to deliver models.
 
-We have prepared sample code available at this GitHub repository to help you transition to these suggested tools.
+We have prepared [sample code available at this GitHub repository](https://github.com/aws-samples/ml-edge-getting-started) to help you transition to these suggested tools.
