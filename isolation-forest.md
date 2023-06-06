@@ -68,9 +68,58 @@ Random partitioning produces noticeably shorter paths for anomalies. Hence, when
 
 [Isolation Forest Parameter tuning with gridSearchCV](https://stackoverflow.com/questions/56078831/isolation-forest-parameter-tuning-with-gridsearchcv)
 
+```python
+from sklearn.ensemble import IsolationForest
+from sklearn.metrics import make_scorer, f1_score
+from sklearn import model_selection
+from sklearn.datasets import make_classification
+
+X_train, y_train = make_classification(n_samples=500, 
+                                       n_classes=2)
+
+clf = IsolationForest(random_state=47, behaviour='new')
+
+param_grid = {'n_estimators': list(range(100, 800, 5)), 
+              'max_samples': list(range(100, 500, 5)), 
+              'contamination': [0.1, 0.2, 0.3, 0.4, 0.5], 
+              'max_features': [5,10,15], 
+              'bootstrap': [True, False], 
+              'n_jobs': [5, 10, 20, 30]}
+
+f1sc = make_scorer(f1_score(average='micro'))
+
+grid_dt_estimator = model_selection.GridSearchCV(clf, 
+                                                 param_grid,
+                                                 scoring=f1sc, 
+                                                 refit=True,
+                                                 cv=10, 
+                                                 return_train_score=True)
+grid_dt_estimator.fit(X_train, y_train)
+```
+
 [How to use the Isolation Forest model for outlier detection](https://practicaldatascience.co.uk/machine-learning/how-to-use-the-isolation-forest-model-for-outlier-detection)
 
+```python
+model = IsolationForest(random_state=47)
 
+param_grid = {'n_estimators': [1000, 1500], 
+              'max_samples': [10], 
+              'contamination': ['auto', 0.0001, 0.0002], 
+              'max_features': [10, 15], 
+              'bootstrap': [True], 
+              'n_jobs': [-1]}
+
+grid_search = model_selection.GridSearchCV(model, 
+                                           param_grid,
+                                           scoring="neg_mean_squared_error", 
+                                           refit=True,
+                                           cv=10, 
+                                           return_train_score=True)
+grid_search.fit(X_train, y_train)
+
+best_model = grid_search.fit(X_train, y_train)
+print('Optimum parameters', best_model.best_params_)
+```
 
 
 ## Reference 
