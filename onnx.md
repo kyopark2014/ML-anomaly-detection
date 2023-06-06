@@ -41,7 +41,6 @@ except Exception as e:
     logging.error(e)
     exit()
     
-
 x = turbine.create_dataset(data, TIME_STEPS, STEP)
 x = np.transpose(x, (0, 2, 1)).reshape(x.shape[0], NUM_FEATURES, 10, 10).astype(np.float32)
 ptemp = sess.run(None, {"input": x})    
