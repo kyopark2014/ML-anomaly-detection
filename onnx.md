@@ -27,3 +27,5 @@ def save(model_dir, model):
 ## Reference
 
 [Exporting to ONNX](https://sagemaker-examples.readthedocs.io/en/latest/sagemaker-python-sdk/mxnet_onnx_export/mxnet_onnx_export.html)
+
+[Hosting ONNX models with Amazon Elastic Inference](https://sagemaker-examples.readthedocs.io/en/latest/aws_sagemaker_studio/frameworks/mxnet_onnx_ei/mxnet_onnx_ei.html)
