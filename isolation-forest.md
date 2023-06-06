@@ -33,11 +33,32 @@ recursive한 partitioning은 트리구조로 표현될수 있기 때문에, 하�
 
 Since recursive partitioning can be represented by a tree structure, the number of splittings required to isolate a sample is equivalent to the path length from the root node to the terminating node.
 
-
-
 This path length, averaged over a forest of such random trees, is a measure of normality and our decision function.
 
 Random partitioning produces noticeably shorter paths for anomalies. Hence, when a forest of random trees collectively produce shorter path lengths for particular samples, they are highly likely to be anomalies.
+
+#### Hyperparameters
+
+- n_estimators=100 // The number of base estimators in the ensemble.
+- max_samples='auto' // The number of samples to draw from X to train each base estimator.   
+  - If int, then draw max_samples samples.  
+  - If float, then draw max_samples * X.shape[0] samples.  
+  - If “auto”, then max_samples=min(256, n_samples).
+  - If max_samples is larger than the number of samples provided, all samples will be used for all trees (no sampling).
+- contamination='auto' // The amount of contamination of the data set, 
+  - i.e. the proportion of outliers in the data set. Used when fitting to define the threshold on the scores of the samples.
+  - If ‘auto’, the threshold is determined as in the original paper.
+  - If float, the contamination should be in the range (0, 0.5].
+- max_features=1.0  // The number of features to draw from X to train each base estimator.
+  - If int, then draw max_features features.
+  - If float, then draw max(1, int(max_features * n_features_in_)) features.
+  -  Note: using a float number less than 1.0 or integer less than number of features will enable feature subsampling and leads to a longerr runtime.
+- bootstrap=False // If True, individual trees are fit on random subsets of the training data sampled with replacement. If False, sampling without replacement is performed.
+  - None means 1 unless in a joblib.parallel_backend context. -1 means using all processors.
+- n_jobs=None // The number of jobs to run in parallel for both fit and predict. 
+- random_state=None // Controls the pseudo-randomness of the selection of the feature and split values for each branching step and each tree in the forest.
+- verbose=0 // Controls the verbosity of the tree building process.
+- warm_start=False  // When set to True, reuse the solution of the previous call to fit and add more estimators to the ensemble, otherwise, just fit a whole new forest.
 
 ## Hyperparamter
 
