@@ -115,3 +115,5 @@ time.sleep(PREDICTIONS_INTERVAL)
 [Exporting to ONNX](https://sagemaker-examples.readthedocs.io/en/latest/sagemaker-python-sdk/mxnet_onnx_export/mxnet_onnx_export.html)
 
 [Hosting ONNX models with Amazon Elastic Inference](https://sagemaker-examples.readthedocs.io/en/latest/aws_sagemaker_studio/frameworks/mxnet_onnx_ei/mxnet_onnx_ei.html)
+
+[Optimize image classification on AWS IoT Greengrass using ONNX Runtime](https://aws.amazon.com/ko/blogs/iot/optimize-image-classification-on-aws-iot-greengrass-using-onnx-runtime/)
